@@ -147,6 +147,10 @@ cite {
     height: 42vh;
 }
 
+.alert {
+    color: red;
+}
+
 @media print {
     [data-background-hash] {
         display: none;
