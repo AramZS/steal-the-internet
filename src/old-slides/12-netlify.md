@@ -1,0 +1,1 @@
+[Netlify](https://www.netlify.com/) can be used to host more complex static sites. 

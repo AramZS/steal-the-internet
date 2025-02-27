@@ -1,0 +1,154 @@
+/* wave via https://codepen.io/jakejarvis/pen/pBZWZw */
+:root {
+    --third-level-hed: #f9dc93;
+}
+
+.wave {
+    animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s; /* Change to speed up or slow down */
+    animation-iteration-count: infinite; /* Never stop waving :) */
+    transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+    display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(14deg);
+    } /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+        transform: rotate(-8deg);
+    }
+    30% {
+        transform: rotate(14deg);
+    }
+    40% {
+        transform: rotate(-4deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    60% {
+        transform: rotate(0deg);
+    } /* Reset for the last half to pause */
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* animated pie chart https://www.freecodecamp.org/news/css-only-pie-chart/ */
+@property --p {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+}
+
+.reveal h3 {
+    color: var(--third-level-hed);
+}
+
+.pie {
+    --p: 20;
+    --b: 22px;
+    --c: darkred;
+    --w: 150px;
+
+    width: var(--w);
+    aspect-ratio: 1;
+    position: relative;
+    display: inline-grid;
+    margin: 5px;
+    place-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.pie:before,
+.pie:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+.pie:before {
+    inset: 0;
+    background:
+        radial-gradient(farthest-side, var(--c) 98%, #0000) top/var(--b)
+            var(--b) no-repeat,
+        conic-gradient(var(--c) calc(var(--p) * 1%), #0000 0);
+    -webkit-mask: radial-gradient(
+        farthest-side,
+        #0000 calc(99% - var(--b)),
+        #000 calc(100% - var(--b))
+    );
+    mask: radial-gradient(
+        farthest-side,
+        #0000 calc(99% - var(--b)),
+        #000 calc(100% - var(--b))
+    );
+}
+.pie:after {
+    inset: calc(50% - var(--b) / 2);
+    background: var(--c);
+    transform: rotate(calc(var(--p) * 3.6deg))
+        translateY(calc(50% - var(--w) / 2));
+}
+.animate {
+    animation: p 2.5s 2.5s both infinite;
+}
+.no-round:before {
+    background-size:
+        0 0,
+        auto;
+}
+.no-round:after {
+    content: none;
+}
+@keyframes p {
+    from {
+        --p: 0;
+    }
+}
+
+.hi {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000000;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 15px #fff,
+        0 0 20px #ff00de,
+        0 0 35px #ff00de,
+        0 0 40px #ff00de,
+        0 0 50px #ff00de;
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+.hi a {
+    color: #0d0082;
+    text-decoration: none;
+}
+
+.citation {
+    text-align: left;
+}
+
+cite {
+    font-size: 0.2em;
+}
+
+.twin-images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 42vh;
+}
+
+@media print {
+    [data-background-hash] {
+        display: none;
+    }
+}

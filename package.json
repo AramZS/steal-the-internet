@@ -1,0 +1,33 @@
+{
+    "name": "steal-the-internet",
+    "version": "1.0.0",
+    "description": "A website that is a presentation about building a website.",
+    "scripts": {
+        "serve": "npx @11ty/eleventy --serve --port=8083",
+        "build": "NODE_ENV=production npx @11ty/eleventy",
+        "tidy": "prettier ./src --write",
+        "serve-with-log-debug": "DEBUG=Eleventy:Template* npx @11ty/eleventy --serve --port=8083 > ./buildlog.txt",
+        "serve-with-log": "npx @11ty/eleventy --serve --port=8083 | tee ./buildlog.txt"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AramZS/steal-the-internet.git"
+    },
+    "author": "Aram Zucker-Scharff <aramzs@hacktext.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Bullrich/reveal-eleventy-template/issues"
+    },
+    "homepage": "https://aramzs.github.io/steal-the-internet/",
+    "dependencies": {
+        "dotenv": "^16.4.5",
+        "markdown-it": "^14.0.0",
+        "markdown-it-link-attributes": "^4.0.1",
+        "reveal.js": "^4.6.1"
+    },
+    "main": ".eleventy.js",
+    "devDependencies": {
+        "@11ty/eleventy": "^2.0.1",
+        "prettier": "^3.0.3"
+    }
+}
