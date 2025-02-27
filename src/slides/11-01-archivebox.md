@@ -1,4 +1,4 @@
-You can use ArchiveBox to archive groups of pages, whole sites, [sitemaps](https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview) or [RSS feeds](https://en.wikipedia.org/wiki/RSS).
+You can use ArchiveBox to archive groups of pages, whole sites, [sitemaps](https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview) or [RSS feeds](https://en.wikipedia.org/wiki/RSS). It also makes copies of videos with [yt-dlp](https://github.com/yt-dlp/yt-dlp).
 
 You can also make a copy of the files it creates.
 

@@ -1,4 +1,8 @@
-# Reveal.js & Eleventy.js template
+# Steal the Internet
+
+This is a presentation about how to do your own archiving and make copies of things on the internet. 
+
+## Reveal.js & Eleventy.js template
 
 Template which implements [`reveal.js`](https://revealjs.com/) in [`11ty`](https://www.11ty.dev/) for simple deployment and development.
 
